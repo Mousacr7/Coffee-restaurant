@@ -1,0 +1,839 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: "open sans", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem;
+  z-index: 15;
+}
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 110vh;
+  background: linear-gradient(#0005, #0008), url("./imgc/coffe.jpeg");
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 95px;
+  width: 100%;
+  transition: all 2s;
+  z-index: 100;
+}
+
+.navbar.active {
+  position: fixed;
+  height: 75px;
+  background-color: #000;
+}
+
+.navbar .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .items .item {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.navbar .items .logo {
+  max-width: 160px;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.navbar .items .logo .img {
+  height: 35px;
+  width: fit-content;
+  object-fit: cover;
+}
+.navbar .items .links {
+  display: flex;
+  gap: 1rem;
+}
+.navbar .items .links .link {
+  font-size: 20px;
+  line-height: 16px;
+  color: #f0f0f0;
+  transition: all 1s;
+  position: relative;
+}
+
+.clock {
+  color: #fff;
+  margin-left: 50px;
+  
+}
+
+.navbar .items .links .link:hover {
+  color: #fff;
+}
+
+.navbar .items .links .link::after {
+  background-color: #f0f0f0;
+  transition: all 1s;
+  position: absolute;
+  width: 0px;
+  content: "";
+  height: 2px;
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%);
+  transition: all 1s;
+}
+
+.navbar .items .links .link:hover::after {
+  width: 80%;
+}
+
+.navbar .items .controls {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.navbar .items .controls .icon {
+  font-size: 16px;
+  color: #f0f0f0;
+  transition: all 1s;
+  position: relative;
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar .items .controls .icon:hover {
+  color: #fff;
+  transition: all 1s;
+  border: 2px solid #aaa;
+}
+
+.content {
+  height: 100%;
+}
+
+.content .container {
+  padding: 0 1rem;
+}
+
+.content .box {
+  background-color: #000a;
+  height: 110vh;
+  max-width: 570px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.content .box .title {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 59px;
+}
+
+.content .box .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content .box .desc .p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.content .box .buttons {
+  padding: 1rem 0;
+}
+
+.content .box .buttons .btn {
+  padding: 0.75rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 16px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 500;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: all 1s;
+}
+
+.content .box .buttons .btn:hover {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+.section .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section .heading .title {
+  font-size: 42px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+.section .heading .subtitle {
+  font-size: 16px;
+  color: #aaa;
+  font-weight: 400;
+  text-align: center;
+  text-transform:uppercase;
+}
+
+.about {
+  background: #f0f0f0;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: -20px;
+}
+
+.about .items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about .image {
+  height: fit-content;
+  max-width: 570px;
+  width: 100%;
+  min-width: 222px;
+  overflow: hidden;
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.about .social {
+  position: absolute;
+  bottom: 1rem;
+  left: 0%;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.about .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+  color: #974e12;
+  transition: all 1s;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.about .social a:hover {
+  color: #fff;
+  background-color: #974e12;
+}
+
+.about .image img {
+  width: 60%;
+  margin-left: 10%;
+  height: fit-content;
+  max-height: 390px;
+  object-fit: cover;
+  transform: rotate(-9deg);
+}
+
+.about .box {
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.363)),
+    url(./imgc/mc.jpeg);
+  height: 100vh;
+  max-width: 570px;
+  width: 100%;
+  min-width: 222px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 100;
+}
+
+.about .box::after {
+  position: absolute;
+  content: "";
+  top:0;
+  left: 0;
+  z-index: 0;
+  /* height: 100vh; */
+  width: 100%;
+  background: url(./imgc/mugCoffe.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.09;
+}
+
+.about .box .title {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 59px;
+  position: relative;
+  z-index: 10;
+
+}
+
+.about .box .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.about .box .desc .p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.about .box .buttons {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.about .box .buttons .btn {
+  padding: 0.75rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 16px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 500;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: all 1s;
+}
+
+.about .box .buttons .btn:hover {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+.about .box .buttons .btn-shop {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  border: 2px solid #111;
+  transition: all 1s;
+
+  color: #000;
+  background-color: #a5702a;
+  border: 2px solid #974e12;
+}
+
+.about .box .buttons .btn-shop:hover {
+  color: #111;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+.service {
+  background-color: #000;
+  padding: 3rem 0rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+.service::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(./imgc/mc.jpeg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+  z-index: 0;
+  opacity: 0.8;
+
+}
+
+.service .items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 8rem;
+}
+
+.service .items .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: linear-gradient(#000e, #000e);
+  cursor: pointer;
+  box-shadow: 0 2px 8px #acabab;
+  border-radius: 4px;
+  transition: all 1s;
+}
+
+.service .items .item:hover {
+  border: 2px solid #eee;
+}
+
+.service .items .item .img {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  padding-left: 9px;
+  padding-top: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.service.items .item .img::after {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.service .items .item .img img {
+  position: relative;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: all 1s;
+}
+
+.service .items .item:hover .img img {
+  transform: scale(1.4);
+}
+
+.service .items .item .i-title {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.service .items .item .desc {
+  color: #f0f0f0;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.shop {
+  padding: 5rem 0;
+  min-height: 100vh;
+  background-color: #fafafa;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.shop::after {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  transform: rotate(-90deg);
+
+  background-color: #fafafa;
+  position: absolute;
+  content: 'coffe products';
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: 300;
+  font-size: 72px;
+  text-align: center;
+}
+
+.shop::before {
+  position: absolute;
+  top: 50%;
+  right:10%;
+  width: 600px;
+  height: 600px;
+  transform: rotate(-90deg);
+
+  background-color: #fafafa;
+  position: absolute;
+  content: 'coffe products';
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: 300;
+  font-size: 72px;
+  text-align: center;
+}
+
+.shop .heading .title {
+  color: #000;
+}
+
+.shop .heading .subtitle {
+  color:#222;
+}
+
+.shop .items {
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(225px,1fr));
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.shop .items .item {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: 0 2px 8px #0498;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.shop .items .item .image {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.shop .items .item .btn-cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #000;
+  padding: 1.3rem 2rem;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor:pointer ;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.shop .items .item:hover .btn-cart  {
+  opacity: 1;
+}
+
+.shop .items .item .image .img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+
+.shop .items .item .detail {
+  border-top: 1px solid #eee;
+  padding: 1rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.shop .items .item .detail .i-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.shop .items .item .detail .prices span {
+  font-size: 16px;
+  color: #555;
+  text-decoration: line-through;
+}
+
+.shop .items .item .detail .prices strong {
+  font-size: 21px;
+  color:#049;
+  padding: 0 5px;
+  transform: scale(1.4)
+}
+
+.shop .items .item .detail .reviews {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.shop .items .item .detail .reviews .icon {
+  font-size: 15px; 
+  color: rgba(209, 97, 6, 0.5);
+  padding: 4px 5px;
+  padding-left: 0;
+}
+
+.shop .items .item .detail .reviews .icon.active {
+  color: rgba(209, 97, 6, 1)
+}
+
+.subscribe {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.subscribe .item {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  background: linear-gradient(#fffa, #444),url('./imgc/coffe.jpeg') no-repeat;
+  background-size: cover;
+}
+
+.subscribe .item .title {
+  font-size: 44px;
+  font-weight: 400;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.subscribe .item .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.subscribe .form {
+  margin-top: 3rem ;
+  padding: 0.25rem;
+  border: 2px solid #049;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #fff;
+}
+
+
+.subscribe .form button {
+  color:#fff;
+  background-color: #049;
+  border: none;
+  padding: 0.5rem 2rem;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0.9;
+  border-top-right-radius: 1.7rem;
+  border-bottom-right-radius: 1.7rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.subscribe .form input {
+  color: #049;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  height: 50px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: #ddd;
+  padding-top: 5rem;
+}
+
+
+.footer .items  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 1.6rem;
+  padding: 4rem 0;
+}
+
+.footer .items .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.footer .items .item :nth-child(1) {
+  grid-column: span 2;
+}
+
+.footer .items .item .head {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .items .item .head img {
+  height: 40px;
+  width: fit-content;
+  object-fit: cover;
+}
+
+.footer .items .item .head .title {
+ font-size: 22px;
+ color:#222; 
+ font-weight: 500;
+}
+
+.footer .itmes .item .head .desc {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer .items .item .head p {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+
+.footer .items .item .links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer .items .item .links .link {
+ font-size: 14px;
+ line-height: 14px;
+ height: 20px;
+ transition: all 1s;
+ color: #555;
+ font-weight: 300; 
+}
+
+.footer .items .item .links .link:hover {
+  color: #000;
+  font-weight: 600;
+}
+
+.rights {
+  background-color: #000;
+  width: 100%;
+}
+.rights .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.rights .container p {
+  font-size: 15px;
+  color: #eee;
+}
+
+.rights .container p a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+
