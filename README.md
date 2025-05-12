@@ -6,7 +6,7 @@ A clean and stylish coffee shop website built with **HTML, CSS, and JavaScript**
 
 ## 🌐 **Live Demo**
 
-🔗 **[👉 Click Here to View the Live Site 👈](https://mousacr7.github.io/Coffee-restaurant/)**
+🔗 **[👉 Click Here to View the Live Site 👈](https://mousacr7.github.io/coffee-restaurant/)**
 
 ---
 
