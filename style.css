@@ -46,7 +46,7 @@ h6,
   left: 0;
   width: 100%;
   min-height: 110vh;
-  background: linear-gradient(#0005, #0008), url("./imgc/coffe.jpeg");
+  background: linear-gradient(#0005, #0008), url("./imgc/background-store.jpeg");
   background-size: cover;
   object-fit: cover;
   background-repeat: no-repeat;
@@ -86,7 +86,8 @@ h6,
 .navbar .items .logo {
   max-width: 160px;
   overflow: hidden;
-  padding: 0 1rem;
+  padding: 0 0.8rem;
+
 }
 
 .navbar .items .logo .img {
@@ -133,10 +134,12 @@ h6,
   width: 80%;
 }
 
+
 .navbar .items .controls {
   display: flex;
   gap: 1rem;
   padding: 0 1rem;
+  
 }
 .navbar .items .controls .icon {
   font-size: 16px;
@@ -151,12 +154,13 @@ h6,
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: 2px solid #aaa;
 }
 
-.navbar .items .controls .icon:hover {
-  color: #fff;
+.navbar .items .controls .icon:hover{
+  color: #000;
   transition: all 1s;
-  border: 2px solid #aaa;
+  background-color: #fff;
 }
 
 .content {
@@ -311,7 +315,7 @@ h6,
 
 .about .box {
   background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.363)),
-    url(./imgc/mc.jpeg);
+    url(./imgc/coffe.jpeg);
   height: 100vh;
   max-width: 570px;
   width: 100%;
@@ -322,8 +326,8 @@ h6,
   justify-content: center;
   gap: 1rem;
   color: #fff;
-  background-size: cover;
-  background-position: right;
+  background-size:cover;
+  background-position: center;
   background-repeat: no-repeat;
   position: relative;
   z-index: 100;
@@ -496,12 +500,14 @@ h6,
   z-index: 10;
   width: 100px;
   height: 100px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
+  
   transition: all 1s;
 }
 
 .service .items .item:hover .img img {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 .service .items .item .i-title {
@@ -617,9 +623,9 @@ h6,
   opacity: 1;
 }
 
-.shop .items .item .image .img {
+.shop .items .item .image img {
   width: 100%;
-  height: fit-content;
+  height: 20vh;
   object-fit: cover;
 }
 
