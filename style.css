@@ -46,7 +46,7 @@ h6,
   left: 0;
   width: 100%;
   min-height: 110vh;
-  background: linear-gradient(#0005, #0008), url("./imgc/background-store.jpeg");
+  background: linear-gradient(#0005, #0008), url("./imgc/background-store.jpg");
   background-size: cover;
   object-fit: cover;
   background-repeat: no-repeat;
@@ -252,7 +252,10 @@ h6,
 }
 
 .about {
-  background: #f0f0f0;
+  background: #f0f0f0 url(./imgc/back.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   width: 100%;
   margin-top: -20px;
@@ -275,9 +278,16 @@ h6,
   position: relative;
 }
 
+.about .image img {
+  width: 100%;
+  height: fit-content;
+  max-height: 390px;
+  object-fit: cover;
+}
+
 .about .social {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   left: 0%;
   width: 100%;
   height: 4rem;
@@ -298,24 +308,17 @@ h6,
   transition: all 1s;
   background-color: #fff;
   border-radius: 50%;
+
 }
 .about .social a:hover {
   color: #fff;
   background-color: #974e12;
 }
 
-.about .image img {
-  width: 60%;
-  margin-left: 10%;
-  height: fit-content;
-  max-height: 390px;
-  object-fit: cover;
-  transform: rotate(-9deg);
-}
 
 .about .box {
-  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.363)),
-    url(./imgc/coffe.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.363))
+  ;
   height: 100vh;
   max-width: 570px;
   width: 100%;
@@ -333,20 +336,8 @@ h6,
   z-index: 100;
 }
 
-.about .box::after {
-  position: absolute;
-  content: "";
-  top:0;
-  left: 0;
-  z-index: 0;
-  /* height: 100vh; */
-  width: 100%;
-  background: url(./imgc/mugCoffe.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.09;
-}
+
+
 
 .about .box .title {
   font-size: 50px;
@@ -438,9 +429,9 @@ h6,
   content: '';
   width: 100%;
   height: 100%;
-  background: url(./imgc/mc.jpeg) no-repeat;
+  background: url(./imgc/b.hcoffe.jpg) no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: left;
   background-attachment: fixed;
   z-index: 0;
   opacity: 0.8;
@@ -684,14 +675,15 @@ h6,
   justify-content: center;
   align-items: center;
   border: 2px solid #000;
-  background: linear-gradient(#fffa, #444),url('./imgc/coffe.jpeg') no-repeat;
+   background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.363)),url(./imgc/background-store.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .subscribe .item .title {
   font-size: 44px;
   font-weight: 400;
-  color: #000;
+  color: #ec9a57;
   text-transform: uppercase;
 }
 
@@ -742,7 +734,7 @@ h6,
 }
 
 .footer {
-  background-color: #ddd;
+  background-color: #000;
   padding-top: 5rem;
 }
 
@@ -753,7 +745,9 @@ h6,
   gap: 1.6rem;
   padding: 4rem 0;
 }
-
+.desc {
+  color: white;
+}
 .footer .items .item {
   width: 100%;
   display: flex;
@@ -782,7 +776,7 @@ h6,
 
 .footer .items .item .head .title {
  font-size: 22px;
- color:#222; 
+ color:#974e12; 
  font-weight: 500;
 }
 
@@ -796,7 +790,7 @@ h6,
 
 .footer .items .item .head p {
   font-size: 16px;
-  color: #555;
+  color: #e6e2e2;
   font-weight: 500;
 }
 
@@ -810,13 +804,13 @@ h6,
  font-size: 14px;
  line-height: 14px;
  height: 20px;
- transition: all 1s;
- color: #555;
- font-weight: 300; 
+ transition: all 0.3s ease;
+ color: #f3f2f2;
+ font-weight: 500; 
 }
 
 .footer .items .item .links .link:hover {
-  color: #000;
+  color: #a5702a;
   font-weight: 600;
 }
 
@@ -842,4 +836,3 @@ h6,
   font-weight: 500;
   color: #fff;
 }
-
